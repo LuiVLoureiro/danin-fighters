@@ -1,0 +1,9 @@
+# compilados (refeitos pelo CMake)
+build/
+build-web/
+dist/
+# artes originais e fotos da família: ficam só no PC
+imagens/
+# opções do jogador
+settings.json
+__pycache__/

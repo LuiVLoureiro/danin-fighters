@@ -1,0 +1,395 @@
+{
+  "id": "danilo",
+  "base": "assets/raw/danilo/base.png",
+  "altura": 108,
+  "personagem": "athletic young man with a lean runner build (not bulky), warm brown skin, short black hair under a navy blue baseball cap, focused friendly face, blue sleeveless running tank top, black running shorts, purple knee-high compression socks, white running shoes with blue stripes, black sports watch on his left wrist",
+  "imagens": [
+    {
+      "arquivo": "tenis.png",
+      "anim": "projectile",
+      "objeto": true,
+      "quadros": [
+        "ONE single running sneaker, exactly the sneaker the character wears (white with royal blue details and laces, same pixel style and outline), seen from the side, toe pointing right, no foot inside, filling about 60% of the image width"
+      ],
+      "json": {
+        "height": 20,
+        "scale_by": "width",
+        "ref_frame": 0,
+        "spin": 900
+      }
+    },
+    {
+      "arquivo": "icone.png",
+      "campo": "icon",
+      "quadros": [
+        "close-up of the character's head and shoulders only, facing right in 3/4 view like the reference, confident focused expression, the head fills the upper two thirds of the image"
+      ]
+    },
+    {
+      "arquivo": "retrato.png",
+      "campo": "portrait",
+      "quadros": [
+        "half-body portrait from the waist up, fighting stance with both fists raised near the chin, facing right in 3/4 view, determined expression, the figure fills most of the image, cut at the waist by the bottom edge"
+      ]
+    },
+    {
+      "arquivo": "idle_1.png",
+      "anim": "idle",
+      "rows": 2,
+      "cols": 2,
+      "quadros": [
+        "standing fighting guard: fists up near the chin, knees slightly bent, light on the balls of the feet, weight centered (a boxer's bounce stance)",
+        "same guard, body 2 pixels lower, knees a little more bent (bounce going down)",
+        "same guard at the lowest point of the bounce, shoulders relaxed",
+        "same guard coming back up, almost like frame 1"
+      ],
+      "json": {
+        "fps": 6,
+        "anchor": "feet",
+        "ref_frame": 0,
+        "sequence": [
+          1,
+          2,
+          3,
+          4,
+          3,
+          2
+        ]
+      },
+      "acao": "A bouncy fighting stance like a boxer, drawn IN PLACE, weight on the balls of the feet",
+      "varia": false
+    },
+    {
+      "arquivo": "andar_sheet.png",
+      "anim": "walk",
+      "rows": 2,
+      "cols": 3,
+      "quadros": [
+        "WIDE STRIDE, near leg in front: the lighter near heel touches the ground far in front of him, the darker far leg stretched far behind on its toes; body at its lowest.",
+        "DOWN: the near foot is flat and takes the weight with the knee bent, the darker far foot leaves the ground behind him, knee bent, swinging forward.",
+        "LEGS TOGETHER: both legs almost straight and side by side under his hips, feet together (the darker far foot slightly lifted next to the near ankle); the narrowest silhouette, body at its highest.",
+        "WIDE STRIDE, far leg in front: the darker far heel touches the ground far in front of him, the lighter near leg stretched far behind on its toes; body at its lowest (frame 1 with the legs swapped).",
+        "DOWN: the far foot is flat and takes the weight, the lighter near foot leaves the ground behind him, knee bent, swinging forward (frame 2 with the legs swapped).",
+        "LEGS TOGETHER again: both legs straight and side by side under his hips, feet together; the narrowest silhouette; ready to loop to frame 1."
+      ],
+      "json": {},
+      "acao": "A calm, confident fighter's walk cycle forward, drawn IN PLACE, upright posture, both fists held up near the chin in a boxing guard the whole time (the arms barely move). The LEGS make the difference between frames: frames 1 and 4 are the WIDEST stride, frames 3 and 6 are the NARROWEST pose with the legs straight and together. The far leg is drawn slightly darker. TOP ROW = the NEAR (lighter) leg steps forward; BOTTOM ROW = the FAR (darker) leg steps forward",
+      "extra": "Cap firmly on, guard steady, calm focused face."
+    },
+    {
+      "arquivo": "arrancada_sheet.png",
+      "anim": "dash",
+      "rows": 2,
+      "cols": 3,
+      "quadros": [
+        "CONTACT, near leg: the near foot lands flat right under his hips, near knee slightly bent; the far leg is behind, bent, heel rising; the FAR arm swings forward (fist at chin height), the NEAR arm swings back (elbow behind the body).",
+        "PUSH-OFF, near leg: the near leg is straight behind him, pushing off the toes; the far knee drives forward and up to hip height; body is one straight diagonal line from the back foot to the head; arms at full swing, far arm forward.",
+        "FLIGHT: both feet clearly off the ground; the far knee is high in front (thigh horizontal), the near heel kicks up behind toward the buttocks; arms switching, both elbows close to the body.",
+        "CONTACT, far leg: the darker FAR foot is the one planted under his hips; the lighter NEAR leg is now the back leg, bent, heel rising; the NEAR arm (with the watch) swings forward, the far arm back.",
+        "PUSH-OFF, far leg: the darker FAR leg is straight behind him pushing off the toes; the lighter NEAR knee drives forward and up to hip height; near arm (with the watch) forward.",
+        "FLIGHT: both feet off the ground; the lighter NEAR knee is high in front, the darker far heel kicks up behind; ready to loop to frame 1."
+      ],
+      "json": {
+        "fps": 15,
+        "scale_like": "walk"
+      },
+      "acao": "An all-out sprint cycle like a professional 100 m runner, drawn IN PLACE, body leaning forward, arms pumping hard with elbows bent at 90 degrees, hands as loose fists. The far leg and far arm are drawn slightly darker and partly hidden behind the body. TOP ROW = the NEAR (lighter) leg leads; BOTTOM ROW = the FAR (darker) leg leads, so the bottom row must NOT copy the top row",
+      "extra": "Cap firmly on, tank top fluttering slightly."
+    },
+    {
+      "arquivo": "soco_sheet.png",
+      "anim": "punch",
+      "rows": 2,
+      "cols": 2,
+      "quadros": [
+        "fighting guard, fists up",
+        "front fist starting a fast jab, shoulder turning forward",
+        "fast jab fully extended straight to the right at head height, arm straight, rear fist guarding the chin",
+        "pulling the jab back to guard"
+      ],
+      "json": {
+        "active_frame": 2,
+        "ref_frame": 0
+      },
+      "acao": "A very fast jab with the front fist, drawn IN PLACE"
+    },
+    {
+      "arquivo": "direto_sheet.png",
+      "anim": "punch2",
+      "rows": 2,
+      "cols": 2,
+      "quadros": [
+        "fighting guard, hips starting to rotate",
+        "rear fist travelling forward, hips and shoulders rotating",
+        "straight right cross fully extended to the right at head height, body rotated into the punch, rear heel lifted",
+        "returning to guard"
+      ],
+      "json": {
+        "active_frame": 2,
+        "ref_frame": 0
+      },
+      "acao": "A straight cross with the rear fist, hips rotating into the punch, drawn IN PLACE"
+    },
+    {
+      "arquivo": "joelhada_sheet.png",
+      "anim": "punch3",
+      "rows": 2,
+      "cols": 2,
+      "quadros": [
+        "both hands reaching forward at head height as if grabbing the opponent's shoulders",
+        "pulling both hands down while the rear knee starts rising",
+        "flying knee: knee driven up and forward to chest height, standing on the tip of one foot, hands pulling down",
+        "landing back in fighting guard"
+      ],
+      "json": {
+        "active_frame": 2,
+        "ref_frame": 0
+      },
+      "acao": "A flying knee strike after grabbing the opponent, drawn IN PLACE"
+    },
+    {
+      "arquivo": "chute_sheet.png",
+      "anim": "kick",
+      "rows": 2,
+      "cols": 3,
+      "quadros": [
+        "fighting guard",
+        "front knee rising like the start of a long running stride",
+        "stride kick: front leg fully extended straight to the right at waist height, sole of the sneaker facing right, body leaning slightly back, arms balancing",
+        "same kick still extended",
+        "kicking leg coming down",
+        "back in fighting guard"
+      ],
+      "json": {
+        "active_frame": 2,
+        "ref_frame": 0
+      },
+      "acao": "A long stride kick, like a runner's long step turned into a push kick, drawn IN PLACE"
+    },
+    {
+      "arquivo": "arremesso_sheet.png",
+      "anim": "special",
+      "rows": 2,
+      "cols": 3,
+      "refs": [
+        "tenis.png"
+      ],
+      "quadros": [
+        "balancing on the LEFT foot, pulling the RIGHT sneaker off the right foot with the right hand (the second attached image shows the sneaker)",
+        "standing on one foot, the right foot now only in a purple sock, holding the sneaker raised behind the head ready to throw",
+        "throwing: throwing arm fully extended forward to the right, hand open, the sneaker has JUST LEFT the hand and is NOT drawn",
+        "follow-through of the throw, body leaning forward, still on one foot",
+        "hopping on the left foot, the right foot (purple sock, no sneaker) lifted, arms out for balance",
+        "hopping on the left foot, small jump, arms out, the right sock foot lifted"
+      ],
+      "json": {
+        "active_frame": 2,
+        "ref_frame": 0
+      },
+      "acao": "He pulls off one of his own running shoes and throws it, then hops on one foot, drawn IN PLACE"
+    },
+    {
+      "arquivo": "furacao_sheet.png",
+      "anim": "super",
+      "rows": 2,
+      "cols": 3,
+      "quadros": [
+        "low sprint start, leaning forward, ready to run in a tight circle",
+        "running, seen from the back (turned away), arms pumping",
+        "running toward the viewer (front view), arms pumping",
+        "running facing right again, body tilted into the curve",
+        "spinning very fast on one foot, arms stretched out to the sides",
+        "spinning, arms out, seen from the side"
+      ],
+      "json": {
+        "fps": 15,
+        "scale_like": "walk"
+      },
+      "acao": "He runs in a very tight circle and spins like a hurricane, drawn IN PLACE"
+    },
+    {
+      "arquivo": "tonto_sheet.png",
+      "anim": "dizzy",
+      "rows": 2,
+      "cols": 2,
+      "quadros": [
+        "dizzy after spinning: hand on the forehead, eyes half closed, knees wobbly, leaning left",
+        "dizzy: swaying to the right, arms loose",
+        "dizzy: leaning left again, mouth open, tongue slightly out",
+        "dizzy: almost upright, swaying"
+      ],
+      "json": {
+        "fps": 6,
+        "scale_like": "walk"
+      },
+      "acao": "Dizzy after spinning too much, wobbling in place",
+      "varia": false
+    },
+    {
+      "arquivo": "pular_sheet.png",
+      "anim": "jump",
+      "rows": 2,
+      "cols": 3,
+      "quadros": [
+        "crouching to jump (impulse), knees deeply bent, arms back",
+        "taking off, body stretched upward, arms swinging up",
+        "in the air at the top, knees tucked to the chest",
+        "falling, legs extending down toward the ground",
+        "landing, knees bent absorbing the impact",
+        "standing back up in fighting guard"
+      ],
+      "json": {
+        "ref_frame": 5
+      },
+      "acao": "A full vertical jump from takeoff to landing, drawn IN PLACE"
+    },
+    {
+      "arquivo": "golpe_ar_sheet.png",
+      "anim": "air_attack",
+      "rows": 2,
+      "cols": 2,
+      "quadros": [
+        "in the air, knees tucked, preparing a flying kick",
+        "flying kick: front leg fully extended diagonally down and forward to the right, rear leg tucked, arms out",
+        "same flying kick still extended",
+        "in the air, pulling the leg back to a tuck"
+      ],
+      "json": {
+        "active_frame": 1,
+        "scale_like": "jump"
+      },
+      "acao": "A flying kick in mid-air"
+    },
+    {
+      "arquivo": "agachar_sheet.png",
+      "anim": "crouch",
+      "rows": 2,
+      "cols": 2,
+      "quadros": [
+        "standing fighting guard",
+        "bending the knees, halfway down, guard up",
+        "low crouch, knees fully bent, guard up near the face",
+        "same low crouch held"
+      ],
+      "json": {
+        "fps": 20,
+        "ref_frame": 0
+      },
+      "acao": "Going down from standing to a low fighting crouch",
+      "varia": false
+    },
+    {
+      "arquivo": "agachar_soco_sheet.png",
+      "anim": "crouch_punch",
+      "rows": 2,
+      "cols": 2,
+      "quadros": [
+        "low crouch, guard up",
+        "low crouch, front fist starting forward",
+        "low crouch, fast punch fully extended straight to the right at stomach height",
+        "low crouch, pulling the fist back"
+      ],
+      "json": {
+        "active_frame": 2,
+        "scale_like": "crouch",
+        "scale_like_frame": 4
+      },
+      "acao": "A fast low punch while crouching"
+    },
+    {
+      "arquivo": "rasteira_sheet.png",
+      "anim": "crouch_kick",
+      "rows": 2,
+      "cols": 3,
+      "quadros": [
+        "low crouch, guard up",
+        "dropping lower, one hand touching the floor",
+        "leg sweep: front leg fully extended along the floor to the right, sneaker sole facing right, body very low, one hand on the floor",
+        "same leg sweep still extended",
+        "pulling the leg back, still very low",
+        "back to the low crouch"
+      ],
+      "json": {
+        "active_frame": 2,
+        "scale_like": "crouch",
+        "scale_like_frame": 4
+      },
+      "acao": "A low leg sweep along the floor while crouching"
+    },
+    {
+      "arquivo": "defesa_sheet.png",
+      "anim": "block",
+      "rows": 2,
+      "cols": 2,
+      "quadros": [
+        "raising the guard: forearms coming up in front of the face",
+        "high block: forearms crossed in front of the face, chin tucked",
+        "absorbing a hit: same block, body pushed slightly back, grimacing",
+        "holding the high block, steady"
+      ],
+      "json": {
+        "fps": 16,
+        "ref_frame": 0
+      },
+      "acao": "A standing high block with both forearms",
+      "varia": false
+    },
+    {
+      "arquivo": "defesa_agachado_sheet.png",
+      "anim": "block_low",
+      "rows": 2,
+      "cols": 2,
+      "quadros": [
+        "low crouch raising the guard, forearms coming up",
+        "low crouch block: forearms crossed in front of the face",
+        "low crouch block absorbing a hit, pushed slightly back",
+        "holding the low crouch block"
+      ],
+      "json": {
+        "fps": 16,
+        "scale_like": "crouch",
+        "scale_like_frame": 4
+      },
+      "acao": "A crouching block with both forearms",
+      "varia": false
+    },
+    {
+      "arquivo": "dano_sheet.png",
+      "anim": "hit",
+      "rows": 2,
+      "cols": 2,
+      "quadros": [
+        "hit in the face: head snapped back, eyes shut, body bent backward, arms flung out",
+        "stumbling one step backward, grimacing, guard broken",
+        "recovering balance, one hand rising",
+        "almost back in fighting guard, hurt expression"
+      ],
+      "json": {
+        "fps": 12,
+        "ref_frame": 3
+      },
+      "acao": "Getting hit hard in the face and recovering"
+    },
+    {
+      "arquivo": "ko_sheet.png",
+      "anim": "ko",
+      "rows": 2,
+      "cols": 3,
+      "quadros": [
+        "hit hard: head snapped back, body bent backward, arms flung up",
+        "falling backward to the LEFT (away from the right side), feet leaving the ground",
+        "hitting the floor on his back, body almost horizontal",
+        "small bounce on the floor, cap almost falling",
+        "lying flat on his back on the floor, head on the LEFT, feet on the right, eyes closed (knocked out)",
+        "same lying pose, completely still"
+      ],
+      "json": {
+        "fps": 8,
+        "scale_by": "width",
+        "ref_frame": 4
+      },
+      "acao": "Knocked out: hit, falls backward and lies on the floor",
+      "varia": false
+    }
+  ]
+}

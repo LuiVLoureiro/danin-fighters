@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Danin Fighters</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Danin Fighters">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#000000">
+<style>
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; touch-action: none;
+               -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+  #canvas { position: fixed; left: 0; top: 0; width: 100vw; height: 100vh; height: 100dvh; display: block; }
+  #status { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+            color: #f5b841; font: bold 18px monospace; }
+</style>
+</head>
+<body>
+<canvas id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas>
+<div id="status">CARREGANDO...</div>
+<script>
+  // Tela de download dos dados do jogo (o jogo tem a própria tela de loading depois)
+  var Module = {
+    canvas: document.getElementById('canvas'),
+    setStatus: function (t) {
+      var s = document.getElementById('status'), m = t.match(/\((\d+)\/(\d+)\)/);
+      s.textContent = m ? 'BAIXANDO ' + Math.floor(100 * m[1] / m[2]) + '%' : t;
+      s.style.display = t ? 'flex' : 'none';
+    }
+  };
+  // Android: o 1º toque põe em tela cheia e deitado (no iPhone, instalar na tela de início já abre sem barras)
+  document.addEventListener('touchend', function () {
+    var d = document.documentElement;
+    if (d.requestFullscreen) d.requestFullscreen().then(function () {
+      if (screen.orientation && screen.orientation.lock) screen.orientation.lock('landscape').catch(function () {});
+    }).catch(function () {});
+  }, { once: true });
+  // dedos ativos (o jogo lê a cada quadro: Module.touchXY() = [x, y, x, y...] em px da página)
+  var touches = {};
+  ['touchstart', 'touchmove', 'touchend', 'touchcancel'].forEach(function (n) {
+    window.addEventListener(n, function (e) {
+      for (var i = 0; i < e.changedTouches.length; i++) {
+        var t = e.changedTouches[i];
+        var old = touches[t.identifier];
+        if (n === 'touchend' || n === 'touchcancel') { if (old) old[2] = true; }  // fica até o jogo ler 1 vez (toque rápido)
+        else touches[t.identifier] = [t.clientX, t.clientY, false];
+      }
+    }, { capture: true, passive: true });
+  });
+  Module.touchXY = function () {
+    var a = [];
+    for (var k in touches) { a.push(touches[k][0], touches[k][1]); if (touches[k][2]) delete touches[k]; }
+    return a;
+  };
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');  // só em https (ou localhost)
+</script>
+{{{ SCRIPT }}}
+</body>
+</html>

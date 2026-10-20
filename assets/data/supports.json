@@ -1,0 +1,59 @@
+{
+  "max_meter": 100,
+  "gain_on_hit": 1.5,
+  "gain_on_damage_taken": 2.0,
+  "comeback": { "below": 0.25, "gain": 1.5 },
+  "supports": [
+    {
+      "id": "perola", "sfx": "latido",
+      "name": "Pérola",
+      "type": "bark",
+      "cost": 25, "cooldown": 300, "max_uses_per_round": 2,
+      "height": 36, "scale": 1.0,
+      "run_speed": 210, "stop_offset": 26,
+      "push": { "max": 7, "radius": 150, "friction": 0.9, "damage": 5 },
+      "icon": "assets/raw/perola/icone.png", "icon_focus": 1.0, "icon_size": 0.6,
+      "description": "Late, dá um pouco de dano e\nempurra o oponente para longe.",
+      "short": "Late, machuca e empurra o rival.",
+      "anims": {
+        "run": { "file": "assets/raw/perola/correr_sheet.png", "rows": 3, "cols": 2, "fps": 14 },
+        "action": { "file": "assets/raw/perola/latido_sheet.png", "rows": 2, "cols": 2, "fps": 8, "active_frame": 2 },
+        "fx": { "file": "assets/raw/perola/latido_onda_sheet.png", "rows": 2, "cols": 2, "fps": 12, "height": 30 }
+      }
+    },
+    {
+      "id": "milka", "sfx": "miado",
+      "name": "Milka",
+      "type": "attack",
+      "cost": 35, "cooldown": 360, "max_uses_per_round": 2,
+      "height": 28, "scale": 1.0,
+      "run_speed": 420, "stop_offset": -30,
+      "attack": { "damage": 6, "guard": "mid" }, "active_frames": 2, "hitbox": [6, 4, 30, 24],
+      "icon": "assets/raw/milka/icone.png", "icon_focus": 1.0, "icon_size": 0.55,
+      "description": "Corre muito rápido e arranha\no oponente (dá para defender).",
+      "short": "Arranha rápido. Dá para defender.",
+      "anims": {
+        "run": { "file": "assets/raw/milka/correr_sheet.png", "rows": 3, "cols": 2, "fps": 18 },
+        "action": { "file": "assets/raw/milka/ataque_sheet.png", "rows": 3, "cols": 2, "fps": 12, "active_frame": 2, "scale_like": "run" },
+        "fx": { "file": "assets/raw/milka/arranhao_sheet.png", "rows": 2, "cols": 2, "fps": 16, "height": 28 }
+      }
+    },
+    {
+      "id": "belle", "sfx": "miado",
+      "name": "Belle",
+      "type": "heal",
+      "cost": 50, "cooldown": 480, "max_uses_per_round": 1,
+      "height": 30, "scale": 1.0,
+      "run_speed": 170, "stop_offset": -22,
+      "heal": { "total": 15, "ticks": 120 },
+      "icon": "assets/raw/belle/icone.png", "icon_focus": 1.0, "icon_size": 0.55,
+      "description": "Senta do seu lado e cura\nsua vida aos poucos.",
+      "short": "Cura sua vida aos poucos.",
+      "anims": {
+        "run": { "file": "assets/raw/belle/correr_sheet.png", "rows": 3, "cols": 2, "fps": 12 },
+        "action": { "file": "assets/raw/belle/cura_sheet.png", "rows": 2, "cols": 2, "fps": 6 },
+        "fx": { "file": "assets/raw/belle/cura_brilho_sheet.png", "rows": 2, "cols": 2, "fps": 8, "height": 70 }
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "fps": 5,
+  "fps_unselected": 2,
+  "zoom": 1.05,
+  "dim": 0.6,
+  "parallax": 2,
+  "particles": {
+    "life": 1.0,
+    "2p":     { "rate": 45, "color": [90, 180, 255] },
+    "cpu":    { "rate": 30, "color": [255, 60, 60] },
+    "sair":   { "rate": 35, "color": [255, 200, 90] },
+    "opcoes": { "rate": 40, "color": [255, 220, 60] }
+  }
+}

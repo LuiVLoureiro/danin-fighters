@@ -1,0 +1,157 @@
+{
+  "stages": [
+    {
+      "id": "sala",
+      "name": "SALA",
+      "image": "assets/bg/mapa1.png",
+      "music": "assets/audio/musica_mapa1.mp3",
+      "crop_top": 553,
+      "crop_bottom": 1600,
+      "floor_y": 1500,
+      "parallax": 0.3,
+      "brightness": 0.7,
+      "table": {
+        "right": 475,
+        "top_y": 1320
+      },
+      "tv": {
+        "x": 943,
+        "y": 875,
+        "w": 413,
+        "h": 237
+      },
+      "light": {
+        "sun": "left",
+        "shadow_length": 0.25,
+        "shadow_alpha": 0.45,
+        "shade": 0.5,
+        "warm": 0.35,
+        "rim": 0.25
+      },
+      "vignette": 0.35,
+      "tv_glow": 0.6
+    },
+    {
+      "id": "mercadao",
+      "name": "MERCADÃO",
+      "music": "assets/audio/musica_mapa1.mp3",
+      "floor_y": 196,
+      "light": {
+        "sun": "left",
+        "shadow_length": 0.45,
+        "shadow_alpha": 0.35
+      },
+      "layers": {
+        "sky": {
+          "top": [
+            92,
+            156,
+            230
+          ],
+          "bottom": [
+            196,
+            224,
+            248
+          ],
+          "clouds": {
+            "file": "assets/raw/stages/mercadao/nuvens.png",
+            "rows": 1,
+            "cols": 3,
+            "height": 26
+          },
+          "cloud_speed": 0.05,
+          "cloud_y": [
+            22,
+            46,
+            32
+          ]
+        },
+        "background": {
+          "file": "assets/raw/stages/mercadao/cenario_fundo.png",
+          "width_scale": 1.7,
+          "wall_y": 538,
+          "wall_screen_y": 136,
+          "parallax": 0.5,
+          "title": "MERCADÃO DANIN",
+          "title_at": [
+            785,
+            214
+          ],
+          "front": "assets/raw/stages/mercadao/cenario_cerca.png"
+        },
+        "props_parallax": 0.6,
+        "shopper": {
+          "files": [
+            "assets/raw/stages/mercadao/cliente_carrinho_sheet.png"
+          ],
+          "rows": 2,
+          "cols": 2,
+          "fps": 6,
+          "height": 23,
+          "speed": 0.4,
+          "every": [
+            6,
+            12
+          ],
+          "path": [
+            [
+              610,
+              392
+            ],
+            [
+              935,
+              448
+            ],
+            [
+              895,
+              500
+            ]
+          ]
+        },
+        "vendor": {
+          "file": "assets/raw/stages/mercadao/vendedor_sheet.png",
+          "rows": 2,
+          "cols": 2,
+          "fps": 4,
+          "pixel_scale": 0.073,
+          "at": [
+            420,
+            627
+          ]
+        },
+        "crowd": {
+          "file": "assets/raw/stages/mercadao/torcida_sheet.png",
+          "rows": 2,
+          "cols": 2,
+          "fps": 3,
+          "hype_fps": 10,
+          "hype_ticks": 60,
+          "pixel_scale": 0.087,
+          "at": [
+            688,
+            520
+          ]
+        },
+        "pigeons": {
+          "file": "assets/raw/stages/mercadao/pombos_sheet.png",
+          "rows": 2,
+          "cols": 2,
+          "fps": 4,
+          "pixel_scale": 0.135,
+          "at": [
+            1080,
+            640
+          ],
+          "scare": 60,
+          "return": 15,
+          "parallax": 1.0
+        },
+        "floor": {
+          "file": "assets/raw/stages/mercadao/chao.png",
+          "scale": 0.25,
+          "top_y": 178
+        }
+      }
+    }
+  ]
+}
